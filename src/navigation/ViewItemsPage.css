@@ -1,0 +1,27 @@
+.Container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.NoDataAlert {
+    font-size: 25px;
+    margin-top: 50px;
+}
+
+.ViewTables table .DeleteButton {
+    border: 1px solid black;
+    height: 30px;
+    font-size: 15px;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff;
+    min-width: 110px;
+}
+
+.SearchTable .DeleteButton:hover {
+    background-color: #fefefe;
+}

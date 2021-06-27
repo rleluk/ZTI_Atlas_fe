@@ -1,0 +1,27 @@
+.FishBox {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 5px 5px 17px -2px #000000; 
+    box-shadow: 5px 5px 17px -2px #000000;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: white;
+    overflow: hidden;
+    margin: 10px;
+}
+
+.FishBox .Button {
+    border: 1px solid black;
+    height: 30px;
+    font-size: 15px;
+    font-family: arial, sans-serif;
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #fff;
+    width: 110px;
+    margin: 5px 5px 15px 5px;
+}
+
+.FishBox .Button:hover {
+    background-color: #eef;
+}

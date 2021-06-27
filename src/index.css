@@ -8,6 +8,10 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+body, html {
+  font-family: arial, sans-serif;
+  background-color: #42a1c6;
 }
