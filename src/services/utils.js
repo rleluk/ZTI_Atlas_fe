@@ -1,7 +1,7 @@
 import Item from '../components/Item';
 import {getData} from './fetch';
 
-export const generateItems = (data, setState, uri) => {
+export const generateItems = (data, updateState) => {
     if (!data || data.length === 0) 
         return;
 
@@ -18,7 +18,7 @@ export const generateItems = (data, setState, uri) => {
                 protectionLength={fish['protectionLength']}
                 imageUrl={fish['imageUrl']}
                 description={fish['description']}
-                onDelete={() => deleteRecord(fish['id'], setState, uri)}
+                onDelete={() => deleteRecord(fish['id'], updateState)}
             />
         )
     });
@@ -27,10 +27,10 @@ export const generateItems = (data, setState, uri) => {
 }
 
 
-export const deleteRecord = async (id, setState, updateStateUri) => {
+export const deleteRecord = async (id, updateState) => {
     if (window.confirm('Na pewno chcesz usunąć rekord?')) {
         await fetch(process.env.REACT_APP_URI + `/fish/${id}`, {method: 'DELETE'})
             .catch(err => console.log(err));
-        setState(await getData(updateStateUri));
+        await updateState();
     }
 }

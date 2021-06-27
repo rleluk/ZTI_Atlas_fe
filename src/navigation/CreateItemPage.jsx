@@ -21,7 +21,7 @@ const addFish = (fishDetails) => {
     }
 }
 
-const AddItemsPage = (props) => {
+const CreateItemPage = (props) => {
     return (
         <div>
             <Menu/>
@@ -36,4 +36,4 @@ const AddItemsPage = (props) => {
     );
 }
 
-export default AddItemsPage;
+export default CreateItemPage;

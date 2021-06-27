@@ -16,7 +16,9 @@ const ViewItemsPage = (props) => {
         fetchData();
     }, []);
 
-    let fishItems = generateItems(fishes, setFishes, '/fish/all');
+    let fishItems = generateItems(fishes, async () => {
+        setFishes(await getData('/fish/all'));
+    });
 
     return (
         <div>

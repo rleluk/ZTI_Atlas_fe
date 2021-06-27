@@ -1,0 +1,9 @@
+.SearchContainer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.NoDataAlert {
+    font-size: 25px;
+    margin-top: 50px;
+}
