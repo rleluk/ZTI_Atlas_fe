@@ -1,15 +1,14 @@
-import { getData } from '../services/fetch';
 import './Item.css';
 
 
 const Item = (props) => {
-    const {name, species, waterType, protectionLength, 
-        protectionPeriod, description, imageUrl, onDelete} = props;
+    const {name, species, waterType, protectionLength, protectionPeriod,
+        description, imageUrl, onDelete, onEdit} = props;
 
     return (
         <div className='FishBox'>
             <div className='ButtonContainer'>
-                <button className='Button'>
+                <button className='Button'onClick={onEdit}>
                     Edytuj
                 </button>
                 <button className='Button' onClick={onDelete}>

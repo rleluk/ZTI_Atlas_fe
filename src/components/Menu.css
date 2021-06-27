@@ -4,19 +4,27 @@
     justify-content: right;
     margin-right: 70px;
     flex-wrap: wrap;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
 }
 
 .MenuItem {
-    font-size: 18px;
     text-decoration: None;
     padding: 20px;
     font-weight: bold;
     color: #000;
     min-width: 150px;
     text-align: center;
+    border-right: 1px solid beige;
+    border-left: 1px solid beige;
+    border-radius: 8px;
 }
 
 .MenuItem:hover {
     background-color: #22859c;
     color: #efefef;
+}
+
+.Login {
+    align-self: right;
 }

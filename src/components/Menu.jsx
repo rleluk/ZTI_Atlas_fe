@@ -17,6 +17,9 @@ const Menu = (props) => {
             <Link to='/create' className='MenuItem'>
                 Dodaj rybę
             </Link>
+            <Link to='/login' className='MenuItem Login'>
+                Zaloguj się
+            </Link>
         </div>
     );
 }

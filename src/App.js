@@ -7,6 +7,8 @@ import {
   ViewItemsPage, 
   CreateItemPage,
   SearchPage,
+  EditItemPage,
+  LoginPage
 } from './navigation';
 
 
@@ -19,6 +21,8 @@ const App = () => {
         <Route exact={true} path='/view' component={ViewItemsPage}/>
         <Route exact={true} path='/create' component={CreateItemPage}/>
         <Route exact={true} path='/search' component={SearchPage}/>
+        <Route exact={true} path='/edit' component={EditItemPage}/>
+        <Route exact={true} path='/login' component={LoginPage}/>
         <Route exact={true} path='/404' component={NotFoundPage}/>
         <Redirect to='/404'/>
       </Switch>
