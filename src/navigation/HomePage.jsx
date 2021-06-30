@@ -7,24 +7,24 @@ const HomePage = (props) => {
     return (
         <div>
             <Menu/>
-            <div class="fish">
-            <div class="fish-body">
-                <div class="eye">
-                <div class="pupil"></div>
+            <div className="fish">
+            <div className="fish-body">
+                <div className="eye">
+                <div className="pupil"></div>
                 </div>
             </div>
-            <div class="fin"></div>
-            <div class="fin fin-bottom"></div>
+            <div className="fin"></div>
+            <div className="fin fin-bottom"></div>
             </div>
 
-            <div class="bubbles bubble-1"></div>
-            <div class="bubbles bubble-5"></div>
-            <div class="bubbles bubble-2"></div>
-            <div class="bubbles bubble-6"></div>
-            <div class="bubbles bubble-3"></div>
-            <div class="bubbles bubble-7"></div>
-            <div class="bubbles bubble-4"></div>
-            <div class="bubbles bubble-8"></div>
+            <div className="bubbles bubble-1"></div>
+            <div className="bubbles bubble-5"></div>
+            <div className="bubbles bubble-2"></div>
+            <div className="bubbles bubble-6"></div>
+            <div className="bubbles bubble-3"></div>
+            <div className="bubbles bubble-7"></div>
+            <div className="bubbles bubble-4"></div>
+            <div className="bubbles bubble-8"></div>
         </div>
     );
 }

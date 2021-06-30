@@ -16,7 +16,7 @@ const addFish = (fishDetails) => {
             imageUrl: fishDetails.imageUrl,
             description: fishDetails.description
         }
-        postData('/fish', body);
+        postData('/admin/fish', body);
         fishDetails.resetValues();
     }
 }

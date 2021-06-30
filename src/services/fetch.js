@@ -1,3 +1,5 @@
+import { authenticationService } from './authentication';
+
 export const getData = async (uri) => {
     let res = await fetch(process.env.REACT_APP_URI + uri)
         .catch(err => console.log(err));
@@ -11,7 +13,8 @@ export const getData = async (uri) => {
 export const postData = async (uri, body) => {
     await fetch(process.env.REACT_APP_URI + uri, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authenticationService.authToken}`
             },
             method: 'POST',
             body: JSON.stringify(body)
@@ -28,7 +31,8 @@ export const postData = async (uri, body) => {
 export const putData = async (uri, body) => {
     await fetch(process.env.REACT_APP_URI + uri, {
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${authenticationService.authToken}`
             },
             method: 'PUT',
             body: JSON.stringify(body)

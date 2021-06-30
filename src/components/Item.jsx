@@ -1,3 +1,4 @@
+import { authenticationService } from '../services/authentication';
 import './Item.css';
 
 
@@ -7,14 +8,17 @@ const Item = (props) => {
 
     return (
         <div className='FishBox'>
-            <div className='ButtonContainer'>
-                <button className='Button'onClick={onEdit}>
-                    Edytuj
-                </button>
-                <button className='Button' onClick={onDelete}>
-                    Usuń
-                </button>
-            </div>
+            {
+                authenticationService.checkAuthorization() ?
+                <div className='ButtonContainer'>
+                    <button className='Button'onClick={onEdit}>
+                        Edytuj
+                    </button>
+                    <button className='Button' onClick={onDelete}>
+                        Usuń
+                    </button>
+                </div> : <></>
+            }
             <div className='FishImage'>
                 <img alt='fish' src={imageUrl}></img>
             </div>

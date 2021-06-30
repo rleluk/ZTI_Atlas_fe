@@ -1,4 +1,5 @@
 import Item from '../components/Item';
+import { authenticationService } from './authentication';
 import history from '../services/history';
 
 export const generateItems = (data, updateState) => {
@@ -34,7 +35,12 @@ export const generateItems = (data, updateState) => {
 
 export const deleteRecord = async (id, updateState) => {
     if (window.confirm('Na pewno chcesz usunąć rekord?')) {
-        await fetch(process.env.REACT_APP_URI + `/fish/${id}`, {method: 'DELETE'})
+        await fetch(process.env.REACT_APP_URI + `/admin/fish/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'Authorization': `Bearer ${authenticationService.authToken}`
+                }
+            })
             .catch(err => console.log(err));
         await updateState();
     }

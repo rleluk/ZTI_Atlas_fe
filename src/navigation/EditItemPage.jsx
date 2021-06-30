@@ -15,7 +15,7 @@ const updateFish = (fishDetails) => {
             imageUrl: fishDetails.imageUrl,
             description: fishDetails.description
         }
-        putData(`/fish/${fishDetails.id}`, body);
+        putData(`/admin/fish/${fishDetails.id}`, body);
         
     }
 }

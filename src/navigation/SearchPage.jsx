@@ -9,7 +9,7 @@ const SearchPage = (props) => {
     const [fishes, setFishes] = useState();
 
     const fetchFishes = async (name = '', species = '', waterType = '') => {
-        const query = `/fish?name=${name}&species=${species}&waterType=${waterType}`
+        const query = `/atlas/fish?name=${name}&species=${species}&waterType=${waterType}`
         await fetch(process.env.REACT_APP_URI + query)
             .then(res => res.json())
             .then(data => setFishes(data))

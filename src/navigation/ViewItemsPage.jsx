@@ -11,13 +11,13 @@ const ViewItemsPage = (props) => {
 
     useEffect(() => {
         const fetchData = async () => {
-            setFishes(await getData('/fish/all'));
+            setFishes(await getData('/atlas/fish/all'));
         }
         fetchData();
     }, []);
 
     let fishItems = generateItems(fishes, async () => {
-        setFishes(await getData('/fish/all'));
+        setFishes(await getData('/atlas/fish/all'));
     });
 
     return (

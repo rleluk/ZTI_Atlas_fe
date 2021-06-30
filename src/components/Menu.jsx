@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { authenticationService } from '../services/authentication';
 import './Menu.css';
 
 
@@ -14,12 +15,23 @@ const Menu = (props) => {
             <Link to='/search' className='MenuItem'>
                 Wyszukaj ryby
             </Link>
-            <Link to='/create' className='MenuItem'>
-                Dodaj rybę
-            </Link>
-            <Link to='/login' className='MenuItem Login'>
-                Zaloguj się
-            </Link>
+            {
+                authenticationService.checkAuthorization() ?
+                <Link to='/create' className='MenuItem'>
+                    Dodaj rybę
+                </Link> : <></>
+            }
+            {
+                authenticationService.checkAuthorization() ?
+                <Link to='/home' className='MenuItem Login' onClick={authenticationService.logout}>
+                    Wyloguj się
+                </Link>
+                :
+                <Link to='/login' className='MenuItem Login'>
+                    Zaloguj się
+                </Link>
+            }
+            
         </div>
     );
 }
